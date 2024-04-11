@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+
+    --font-size-quote: 1.125rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--dark-blue);
+    color: var(--light-cyan);
+    font-family: 'Manrope', sans-serif;
+}
+
+button {
+    display: block;
+    background: transparent;
+    border: none;
+}
+
+.main__card {
+    width: 20rem;
+    padding: 1.5rem;
+    background-color: var(--dark-grayish-blue);
+    position: relative;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#card-title {
+    color: var(--neon-green);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+}
+
+#card-quote {
+    font-size: var(--font-size-quote);
+    font-weight: 700;
+    margin: 1.5rem 0;
+}
+
+.divider__container {
+    margin-bottom: 1.5rem;
+}
+
+img {
+    width: 100%;
+}
+
+#quote-generator-btn {
+    position: absolute;
+    bottom: -1.75rem;
+    left: calc(50% - 1.75rem);
+    aspect-ratio: 1/1;
+    width: 3.5rem;
+    border-radius: 50%;
+    background-color: var(--neon-green);
+    transition: box-shadow 0.3s;
+}
+#quote-generator-btn:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 30px var(--neon-green);
+}
+
+#btn-img {
+    width: initial;
+    transition: transform .5s ease-in-out;
+}
+
+#quote-generator-btn:hover img {
+    transform: scale(1.125);
+}
+
+
+@media (min-width: 768px) {
+    .main__card {
+        padding: 2rem;
+    }
+}
